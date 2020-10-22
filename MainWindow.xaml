@@ -1,0 +1,38 @@
+﻿<Window x:Class="Hw8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hw8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="закладка 1">Первая закладка</TabItem>
+            <TabItem Header="закладка 2">Вторая закладка</TabItem>
+            <TabItem Header="Добавить в закладку">+</TabItem>
+        </TabControl>
+
+        <TabControl x:Name="products" Margin="0,10,0,-10">
+            <TabItem x:Name="smartphonesTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Height="10" Width="10" Fill="Black" />
+                        <TextBlock><Run Text="Смартфоны"/></TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton IsChecked="True">iPhone S6</RadioButton>
+                        <RadioButton>LG G 4</RadioButton>
+                        <RadioButton>Lumia 550</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+                
+            </TabItem>
+            <Button Name="button">Click Me!</Button>
+        </TabControl>
+        
+        
+    </Grid>
+</Window>
